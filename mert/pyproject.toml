@@ -1,0 +1,29 @@
+[build-system]
+requires = ["setuptools>=77"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "octantvector-mert"
+version = "0.3.0"
+description = "MERT-v1-95M views for OctantVector: mert_v1_95m, vocal_mert_v1_95m"
+readme = "README.md"
+requires-python = ">=3.11.4"  # OctantVector's (tarfile extraction filters)
+license = "CC-BY-NC-4.0"
+license-files = ["LICENSE", "NOTICE", "licenses/*"]
+# octantvector 0.8, the release OctantHarvest builds with (octantvector.plugin, PLUGIN_API 0.3 with ImageEncoder, credits from 0.2,
+# and models_dir from 0.4); torch 2.6: transformers loads
+# pytorch_model.bin only with torch >= 2.6 (torch.load weights_only)
+dependencies = ["octantvector>=0.9.0,<0.10", "transformers>=4.45", "torch>=2.6"]
+
+[project.optional-dependencies]
+vocal = ["octantvector[vocal]>=0.9.0,<0.10"]  # views with stem = "vocal" (Demucs)
+dev = ["pytest>=8", "octantvector[embed]>=0.9.0,<0.10"]  # embed: soxr for resampling the clips
+
+[project.entry-points."octantvector.encoders"]
+mert = "octantvector_mert"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

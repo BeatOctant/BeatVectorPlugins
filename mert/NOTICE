@@ -1,0 +1,18 @@
+octantvector-mert
+
+Copied files
+  src/octantvector_mert/modeling_MERT.py
+  src/octantvector_mert/configuration_MERT.py
+from the Hugging Face repository m-a-p/MERT-v1-95M (https://huggingface.co/m-a-p/MERT-v1-95M) at revision
+12af15fef9d0ac838c3f475bfbbf26d2060dd4f5. Their content is unchanged except for a comment block added at the top of
+each (source, revision, licence). The upstream files carry no licence header; the repository is published under
+CC BY-NC 4.0.
+
+Upstream notes: modeling_MERT.py says it largely adapts
+  - transformers' HuBERT (src/transformers/models/hubert/modeling_hubert.py), Apache License 2.0,
+    https://github.com/huggingface/transformers
+  - fairseq's wav2vec 2.0 (fairseq/models/wav2vec/wav2vec2.py), MIT License, https://github.com/facebookresearch/fairseq
+Their licence texts are in licenses/: transformers-Apache-2.0.txt (Apache License 2.0) and fairseq-MIT.txt
+(Copyright (c) Facebook, Inc. and its affiliates).
+
+The model weights (pytorch_model.bin) are not included; `octantharvest models` downloads them into models_dir.

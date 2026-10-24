@@ -1,0 +1,29 @@
+[build-system]
+requires = ["setuptools>=77"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "octantvector-clap"
+version = "0.3.0"
+description = "LAION CLAP (HTS-AT, unfused) views for OctantVector: clap_htsat_unfused, vocal_clap_htsat_unfused, clap_concepts"
+readme = "README.md"
+requires-python = ">=3.11.4"  # OctantVector's (tarfile extraction filters)
+license = "MIT"
+license-files = ["LICENSE"]
+# octantvector 0.8, the release OctantHarvest builds with (octantvector.plugin, PLUGIN_API 0.3 with ImageEncoder, credits from 0.2,
+# and models_dir from 0.4); torch 2.6: transformers loads
+# pytorch_model.bin only with torch >= 2.6 (torch.load weights_only)
+dependencies = ["octantvector>=0.9.0,<0.10", "transformers>=4.45", "torch>=2.6"]
+
+[project.optional-dependencies]
+vocal = ["octantvector[vocal]>=0.9.0,<0.10"]  # views with stem = "vocal" (Demucs)
+dev = ["pytest>=8", "octantvector[embed]>=0.9.0,<0.10"]  # embed: soxr for resampling the clips
+
+[project.entry-points."octantvector.encoders"]
+clap = "octantvector_clap"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

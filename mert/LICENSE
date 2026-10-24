@@ -1,0 +1,11 @@
+octantvector-mert is licensed under the Creative Commons Attribution-NonCommercial 4.0 International licence
+(CC BY-NC 4.0): https://creativecommons.org/licenses/by-nc/4.0/legalcode
+
+It is under that licence because it contains code copied from the Hugging Face repository m-a-p/MERT-v1-95M, which is
+published under CC BY-NC 4.0. The whole package, including the code written for OctantVector
+(src/octantvector_mert/__init__.py, tests/), is distributed under the same licence. Use is limited to non-commercial
+purposes.
+
+Attribution: MERT (Multimedia Evaluation of Representation and Transfer) by the m-a-p team
+(https://huggingface.co/m-a-p/MERT-v1-95M). Copyright (c) 2026 nejiman10 for the code written for OctantVector.
+The copied files and what they adapt are listed in NOTICE.

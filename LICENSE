@@ -1,0 +1,11 @@
+This repository holds several packages, one per folder. Each folder has its own LICENSE, and there is no licence
+for the repository as a whole.
+
+  clap/     MIT
+  mert/     CC BY-NC 4.0 (non-commercial only; it contains a copy of the MERT model code, see mert/NOTICE)
+  siglip/   MIT
+  wavlm/    MIT
+  whisper/  MIT
+
+The models these packages download have their own terms; each package's README and the `credits` of its views say
+which.
