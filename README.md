@@ -30,7 +30,7 @@
 
 | 相手 | 版 | つなぐもの |
 | --- | --- | --- |
-| OctantVector | v0.10.0（各パッケージの範囲は `>=0.10.0,<0.11`） | `octantvector.plugin`（`PLUGIN_API` 0.3） |
+| OctantVector | v0.12.1（各パッケージの範囲は `>=0.12.0,<0.13`） | `octantvector.plugin`（`PLUGIN_API` 0.3） |
 | OctantHarvest（プラグインで DB を作る） | 最新 | OctantVector を通して呼ばれる |
 
 ## プラグイン API は不安定です

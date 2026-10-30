@@ -15,8 +15,8 @@ permissions:
   contents: read
 env:
   # The OctantVector release the tests run against: a tag (or, before the tag, a commit) inside the packages' range
-  # (octantvector>=0.10.0,<0.11). v0.8.0 brought ImageEncoder and norm "none"
-  OCTANTVECTOR_TAG: v0.10.0
+  # (octantvector>=0.12.0,<0.13). v0.8.0 brought ImageEncoder and norm "none"
+  OCTANTVECTOR_TAG: v0.12.1
 jobs:
   test:
     runs-on: ubuntu-latest
